@@ -80,37 +80,53 @@ Mac系统
 
 Git规定：所有 commit 必须要有使用者名称和信箱；
 
-git init   //在目前的资料夹内部建立本地档案库
+```
+git init  //在目前的资料夹内部建立本地档案库
 
 git init folder //建立资料夹并建立本地档案库
-
-git config user.name "Lisa Huang" //设定当前档案库使用者名称
-
+git config user.name "Lisa Huang" 
 git config  user.email ***@gmail.com. //设定当前档案库使用者Email
-
-
-
 git config --global user.name "Lisa Huang" //设定全域使用者名称
-
 git config --global user.email ***@gmail.com //设定全域使用者Email
 
-git config --global color.ui auto // 设置配色方案
-
+git config --global color.ui auto //设置配色方案
 git config --global merge.conflictstyle diff3
-
 git config --global code.editor "code --wait"
-
-
+git config --global init.defaultBranch main
 
 git config --list //显示所有有效的设定
 
 git config --list --local  //显示在local上面有效的设定
-
 git config --list --global 
 
-git config --list --edit //可以打开写好的配置文件进行修改 
-
+git config --list --edit  //可以打开写好的配置文件进行修改
 git config --list --system 
+
+git branch
+git branch -v 
+git branch --merged
+git branch --no-merged
+
+// change a branch's name to a new name locally and on the remote
+git branch --move old-branch-name new-branch-name
+git push --set-upstream origin new-branch-name
+git push origin --delete old-branch-name
+```
+
+
+PAT - GitHub / Settings / Developer... / Generate ->
+	ghp_...
+
+```
+$ git clone https://<tokenhere>@github.com/<user>/<repo>.git
+$ git push
+
+// update the message of the lase commit
+$ git commit --amend -m [message]
+
+// connect current branch with a remote branch
+$ git branch --set-upstream [branch] [remote-branch] 
+```
 
  
 
@@ -235,7 +251,7 @@ git reset --hard HEAD~3  //HEAD 指向 回退 3 个版本
 ```
 git branch  //列出所有分支
 
-git branch -M main // 将分支名称改为 main 
+git branch -M main // 将当前分支名称改为 main 
 
 git branch dev //在目前 HEAD 位置建立一个新分支
 
