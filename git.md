@@ -182,7 +182,7 @@ git cat-file -p HashID //查看hash id的内容，hash id最少4码以上
 
 
 
-git show //列出最后一个 commit， 包含异 动内容
+git show //列出最后一个 commit， 包含异动内容
 
 git show commitID//显示：指定 ID 的 commit与上一版的变更
 
