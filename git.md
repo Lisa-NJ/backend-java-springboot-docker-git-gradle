@@ -376,6 +376,8 @@ git push //把本地端的commit推送到遠端
 
 git push -u origin master //和 git branch -u origin/master master 意思相同，然後同時也會把commit推到遠端去。-u是 --set-upstream 的缩写
 
+输入用户名 + password:PAT 即可push成功
+
 【push時會先要求pull】
 
 因為push上去的commit一定要包含遠端最後一個commit，所以得先pull合併現在遠端最後一commit接下來才能push
