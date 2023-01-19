@@ -152,7 +152,7 @@ git commit --amend -m "fix comment" //修改最后一次 commit 的注释
 
 git rm file.txt //从本地库移除指定文件
 
-git log //显示所有 commit 记录，不包含异动内容
+git log //显示所有 commit 记录，如果太长按 Q - 退出
 
 git log --pretty=oneline //简要版本的提交记录 查看
 
