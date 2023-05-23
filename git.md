@@ -191,8 +191,8 @@ git show commitID abc.txt //查看某文件是否发生变化，如果没有显�
 git show commitID: abc.txt //查看指定版号下指定档案的完整内容
 
 git diff    //比对 工作目录与暂存区 文件的差异  
-
-
+git diff master..feature //比较两个不同版本之间的区别
+git diff master..feature -- path/to/file //比较两个不同版本某个文件的区别
 
 git add -p s y n e //将档案 分块 加入 暂存区，commit 过的才有效
 
