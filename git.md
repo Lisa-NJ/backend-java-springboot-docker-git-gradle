@@ -222,6 +222,8 @@ git revert c4 c3 c2 //依次连续做rollback
 
 【git reset】
 
+git reset filename //将错add的文件从暂存区拿回
+
 git reset --hard //重设目前 HEAD 的工作目录，清除暂存区；
 
 git reset commitID --hard   //重设 HEAD & 工作目录 & 目前分支 到 commitID 指定的版本，清除暂存区
@@ -397,6 +399,7 @@ git push --force-with-lease //稍微安全一點的做法，你至少要先fetch
 【清除不必要的档案】
 
 git clean -f //清理未版控的檔案(reset不會把沒有版控的檔案刪除)
+git clean -xf //清除工作目录中未跟踪的文件和目录, -x：清除工作目录中未跟踪的文件, -f：强制执行清除操作
 
 git gc //清理不必要git的Objects物件
 
