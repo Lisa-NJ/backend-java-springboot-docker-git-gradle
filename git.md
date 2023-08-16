@@ -99,7 +99,7 @@ git config --list //显示所有有效的设定
 git config --list --local  //显示在local上面有效的设定
 git config --list --global 
 
-git config --list --edit  //可以打开写好的配置文件进行修改
+git config --list --edit  // 可以打开写好的配置文件进行修改
 git config --list --system 
 
 git branch
@@ -111,6 +111,9 @@ git branch --no-merged
 git branch --move old-branch-name new-branch-name
 git push --set-upstream origin new-branch-name
 git push origin --delete old-branch-name
+
+tig  //  an interactive and visual way to navigate and analyze Git repositories
+
 ```
 
 
@@ -156,7 +159,7 @@ git log //显示所有 commit 记录，如果太长按 Q - 退出
 
 git log --pretty=oneline //简要版本的提交记录 查看
 
- 
+git log -p -- Config.c >result.txt //查看单个文件的修改记录
 
 .gitignore //排除被追踪的档案清单（每个档案或资料夹一行，可使用万用字元），git status 后不再显示这里面指定的文件
 
@@ -311,6 +314,8 @@ git merge --no-ff dev  // 不使用快进合并分支
 如果想要维持版本线条一条的话：
 
 git rebase master //把目前分支重写到 master，如果有冲突先修好 git add 加入，再透过 git rebase --continue 完成
+
+git rebase -i commitID //把最近若干次提交合并成一次
 
 //。。。
 
